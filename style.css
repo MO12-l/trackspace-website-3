@@ -1,3 +1,11 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #20323d;
+  background: #f3f7f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,64 +13,77 @@
 body {
   min-height: 100vh;
   margin: 0;
+  padding: 24px;
   display: grid;
   place-items: center;
-  padding: 24px;
-  background: #f2f5f3;
-  color: #17231e;
-  font-family: Arial, sans-serif;
 }
 
 .card {
-  width: min(100%, 600px);
-  padding: 48px;
-  border: 1px solid #dce5df;
-  border-radius: 24px;
+  width: min(100%, 520px);
+  padding: clamp(32px, 8vw, 56px);
   background: #fff;
-  box-shadow: 0 16px 48px #17231e12;
+  border: 1px solid #e2e9e8;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgb(32 50 61 / 8%);
 }
 
 .label {
-  color: #27845b;
+  margin: 0 0 20px;
+  color: #087b7b;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
 }
 
 h1 {
-  max-width: 460px;
-  margin: 18px 0;
-  font-size: clamp(36px, 8vw, 60px);
-  line-height: 1.05;
+  max-width: 400px;
+  margin: 0;
+  font-size: clamp(36px, 8vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .description {
-  color: #5b6861;
-  font-size: 18px;
+  margin: 20px 0 28px;
+  color: #68777e;
+  font-size: 17px;
   line-height: 1.6;
 }
 
 button {
-  margin-top: 18px;
-  padding: 14px 22px;
+  min-height: 52px;
+  padding: 0 28px;
   border: 0;
   border-radius: 10px;
-  background: #27845b;
+  background: #087b7b;
   color: #fff;
-  font-size: 16px;
+  font: inherit;
+  font-weight: 700;
   cursor: pointer;
 }
 
 button:hover {
-  background: #1e6948;
+  background: #066969;
+}
+
+button:focus-visible {
+  outline: 3px solid #8ed2cb;
+  outline-offset: 3px;
 }
 
 #message {
-  color: #27845b;
+  min-height: 1.5em;
+  margin: 16px 0 0;
+  color: #68777e;
+  font-size: 14px;
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
   .card {
-    padding: 32px 24px;
+    border-radius: 16px;
   }
 }
